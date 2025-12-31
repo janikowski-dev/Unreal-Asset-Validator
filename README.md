@@ -33,9 +33,9 @@ https://github.com/janikowski-dev/Asset-Validator
 ## Design Principles
 
 - Clear separation between export and validation  
-- No engine-specific validation rules  
+- No engine-specific validation rules
+- Consistent JSON schema across tools
 - Reusable across projects and pipelines  
-- CI-friendly by design  
 
 ---
 
