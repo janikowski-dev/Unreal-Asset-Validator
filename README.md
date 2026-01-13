@@ -44,3 +44,69 @@ https://github.com/janikowski-dev/Asset-Validator
 This plugin intentionally contains **no validation logic**.
 
 It exists solely to bridge Unreal Engine with an external validation system.
+
+---
+
+## Installation (for Unreal Developers)
+
+### Requirements
+
+- **Unreal Engine 5.x**
+- Project-level plugin installation
+
+---
+
+### Installation Steps
+
+1. **Clone or download the plugin**
+   - Clone this repository or download it as a ZIP
+   - Extract it if needed
+
+2. **Place the plugin in your project**
+   ```
+   (YourProject)/Plugins/UnrealMetadataExporter/
+   ```
+
+3. **Regenerate project files** (if using C++)
+   - Right-click the `.uproject`
+   - Select **Generate Visual Studio project files**
+
+4. **Open the project in Unreal Editor**
+
+5. If prompted, **rebuild missing modules**
+
+6. Go to **Edit → Plugins**
+   - Locate **Unreal Metadata Exporter**
+   - Enable the plugin
+   - Restart the editor if requested
+
+---
+
+### Verifying Installation
+
+- Open the **Content Browser**
+- Expand the `Tools` menu
+- Locate the **Export Assets for Validation** entry provided by the plugin
+
+If the export option is available, the plugin is loaded correctly.
+
+---
+
+### Updating the Plugin
+
+1. Close Unreal Editor
+2. Replace the plugin folder with the newer version
+3. Regenerate project files if needed
+4. Reopen the project and rebuild
+
+---
+
+## Notes for Developers
+
+- This plugin performs **no validation**
+- It only extracts editor-visible metadata and serializes it to JSON
+- Validation rules live entirely in the external Asset Validator
+- Keep engine-facing code:
+  - editor-only
+  - minimal
+  - schema-aligned
